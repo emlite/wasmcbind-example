@@ -7,8 +7,9 @@ wasm-cbind is fetched in the CMake script using FetchContent.
 Do note that using npm is not strictly necessary, however it simplifies bundling emlite and managing its version.
 
 ## Usage
-After git cloning the repo:
 ```bash
+git clone https://github.com/emlite/wasm-cbind-example --recurse-submodules
+cd wasm-cbind-example
 npm i
 npm run cmake:config
 npm run cmake:build

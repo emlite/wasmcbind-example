@@ -1,16 +1,8 @@
 cmake_minimum_required(VERSION 3.20)
 project(wasmbind-example)
 
-include(FetchContent)
-FetchContent_Declare(
-    wasm-cbind
-    GIT_REPOSITORY https://github.com/emlite/wasm-cbind.git
-    GIT_TAG main
-    GIT_SHALLOW True
-)
-# if targeting wasm32-unknown-unknown (freestanding)
 set(EMLITE_USE_DLMALLOC ON CACHE BOOL " " FORCE)
-FetchContent_MakeAvailable(wasm-cbind)
+add_subdirectory(wasm-cbind)
 
 add_executable(main src/main.c)
 target_link_libraries(main PRIVATE webbind::webbind)

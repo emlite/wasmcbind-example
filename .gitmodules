@@ -1,0 +1,3 @@
+[submodule "wasm-cbind"]
+	path = wasm-cbind
+	url = https://github.com/emlite/wasm-cbind
